@@ -28,8 +28,8 @@ func SeedUsers(db *sql.DB) {
 	}
 
 	rawUsers := []User{
+		{"Administrator", "administrator@mail.com", "12345678"},
 		{"Admin", "admin@mail.com", "12345678"},
-		{"Warehouse", "warehouse@mail.com", "12345678"},
 	}
 
 	for _, u := range rawUsers {
@@ -40,9 +40,10 @@ func SeedUsers(db *sql.DB) {
 			continue
 		}
 
+		// Menambahkan kolom is_verified dengan nilai 1 (true)
 		_, err = db.Exec(`
-			INSERT INTO users (name, email, password)
-			VALUES (?, ?, ?)
+			INSERT INTO users (name, email, password, is_verified)
+			VALUES (?, ?, ?, 1)
 			ON DUPLICATE KEY UPDATE email = email
 		`, u.Name, u.Email, hash)
 

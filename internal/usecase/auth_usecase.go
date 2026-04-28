@@ -87,8 +87,15 @@ func (u *authUsecase) VerifyOTP(ctx context.Context, req model.VerifyOTPRequest)
 }
 
 func (u *authUsecase) Login(ctx context.Context, email, password string) (*utils.TokenResponse, error) {
+	// 1. Cari user dulu
 	user, err := u.repo.FindByEmail(ctx, email)
-	if err != nil || !utils.CheckPassword(password, user.Password) {
+	if err != nil {
+		// Jika error (misal: user tidak ketemu), langsung stop di sini
+		return nil, errors.New("email atau password salah")
+	}
+
+	// 2. Sekarang aman untuk cek password karena 'user' dipastikan tidak nil
+	if !utils.CheckPassword(password, user.Password) {
 		return nil, errors.New("email atau password salah")
 	}
 

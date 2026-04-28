@@ -82,10 +82,22 @@ func (h *AuthHandler) Login(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{
-		"access_token":  tokens.AccessToken,
-		"refresh_token": tokens.RefreshToken,
-		"message":       "Login berhasil",
+	// c.JSON(http.StatusOK, gin.H{
+	// 	"access_token":  tokens.AccessToken,
+	// 	"refresh_token": tokens.RefreshToken,
+	// 	"message":       "Login berhasil",
+	// })
+
+	type LoginResponse struct {
+		Message      string `json:"message"`
+		AccessToken  string `json:"access_token"`
+		RefreshToken string `json:"refresh_token"`
+	}
+
+	c.JSON(http.StatusOK, LoginResponse{
+		AccessToken:  tokens.AccessToken,
+		RefreshToken: tokens.RefreshToken,
+		Message:      "Login berhasil",
 	})
 }
 

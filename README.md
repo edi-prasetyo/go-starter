@@ -71,6 +71,17 @@ http://localhost:8080
 
 ## API Endpoints
 
+Default Data dari seeder
+http://localhost:8080/auth/login
+method : POST
+
+```text
+{
+    "email": "administrator@mail.com",
+    "password": "12345678"
+}
+```
+
 | Method | Endpoint         | Fungsi                                          |
 | :----- | :--------------- | :---------------------------------------------- |
 | POST   | `/auth/register` | Daftar user baru & kirim OTP                    |

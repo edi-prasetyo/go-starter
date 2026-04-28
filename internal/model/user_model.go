@@ -17,6 +17,12 @@ import (
 	"time"
 )
 
+type Role struct {
+	ID          int    `json:"id"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+}
+
 type User struct {
 	ID           int            `json:"id"`
 	Name         string         `json:"name"`
@@ -25,10 +31,12 @@ type User struct {
 	IsVerified   bool           `json:"is_verified"`
 	OTPCode      sql.NullString `json:"-"`
 	OTPExpiredAt *time.Time     `json:"-"`
-	FCMToken     sql.NullString `json:"fcm_token"`
+	FCMToken     *string        `json:"fcm_token"`
 	CreatedAt    time.Time      `json:"created_at"`
 	UpdatedAt    time.Time      `json:"updated_at"`
 	DeletedAt    *time.Time     `json:"-"`
+
+	Roles []Role `json:"roles"`
 }
 
 type RegisterRequest struct {

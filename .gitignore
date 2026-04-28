@@ -16,5 +16,8 @@
 # Go build cache
 *.out
 
+# Environment variables
+.env
+
 # Dependency (kalau vendor dipakai)
 vendor/

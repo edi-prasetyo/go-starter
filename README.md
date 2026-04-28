@@ -9,7 +9,6 @@ Boilerplate backend menggunakan Golang dengan arsitektur modular, mengimplementa
 ## 🚀 Fitur Utama
 
 - **Clean Architecture**: Pemisahan layer antara Delivery (Handler/HTTP), Usecase (Logic), dan Repository (Data).
-- **Dual Token Authentication**: Menggunakan JWT Access Token (1 jam) dan Refresh Token (3 bulan).
 - **OTP Verification**: Sistem registrasi dengan verifikasi kode OTP melalui email.
 - **Middleware Protected Routes**: Proteksi API menggunakan JWT Middleware.
 - **Secure Password**: Enkripsi password menggunakan Bcrypt.
@@ -20,7 +19,7 @@ Boilerplate backend menggunakan Golang dengan arsitektur modular, mengimplementa
 ### Clone Repository
 
 ```text
-git clone [https://github.com/edi-prasetyo/go-starter.git](https://github.com/edi-prasetyo/go-starter.git)
+git clone https://github.com/edi-prasetyo/go-starter.git
 cd go-starter
 ```
 

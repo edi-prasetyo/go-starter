@@ -69,3 +69,13 @@ go run cmd/api/main.go
 ```text
 http://localhost:8080
 ```
+
+## API Endpoints
+
+| Method | Endpoint         | Fungsi                                          |
+| :----- | :--------------- | :---------------------------------------------- |
+| POST   | `/auth/register` | Daftar user baru & kirim OTP                    |
+| POST   | `/auth/verify`   | Verifikasi OTP & dapatkan Token                 |
+| POST   | `/auth/login`    | Login & dapatkan Access + Refresh Token         |
+| POST   | `/auth/refresh`  | Perbarui Access Token menggunakan Refresh Token |
+| GET    | `/profile`       | Akses Profile                                   |

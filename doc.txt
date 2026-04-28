@@ -1,7 +1,0 @@
-
-Jalankan Migrasi Seeder
-- go run cmd/api/main.go --seed
-
-Jalankan Aplikasi
-- go run cmd/api/main.go
-- akses http://localhost:8080

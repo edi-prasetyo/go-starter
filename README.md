@@ -1,8 +1,8 @@
 # Go Starter - Authentication System & User Management
 
-[![Go Version](https://img.shields.io/github/go-mod/go-version/username/repo?style=flat-square)](https://go.dev/)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](#)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](https://opensource.org/licenses/MIT)
+![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 
 Boilerplate backend menggunakan Golang dengan arsitektur modular, mengimplementasikan sistem autentikasi modern menggunakan JWT (Access & Refresh Token).
 
